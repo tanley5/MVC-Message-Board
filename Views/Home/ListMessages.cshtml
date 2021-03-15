@@ -1,0 +1,37 @@
+@model IEnumerable<MessageBoard.Models.Message>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+</head>
+
+<body>
+    <h2>Here are the lists of messages</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (MessageBoard.Models.Message r in Model)
+            {
+                <tr>
+                    <td>@r.Name</td>
+                    <td>@r.TheMessage</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+
+</html>

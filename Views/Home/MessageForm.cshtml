@@ -1,0 +1,32 @@
+@model MessageBoard.Models.Message
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Form</title>
+</head>
+
+<body>
+    <form asp-action="MessageForm" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Name">Your Name:</label>
+            <input asp-for="Name" />
+        </div>
+        <div>
+            <label asp-for="TheMessage">The Message</label>
+            <input asp-for="TheMessage" />
+        </div>
+        <button type="submit">Submit Message</button>
+    </form>
+</body>
+
+</html>

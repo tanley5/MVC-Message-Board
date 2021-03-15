@@ -1,0 +1,24 @@
+@model MessageBoard.Models.Message;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks</title>
+</head>
+
+<body>
+    <div>
+        <h1>Thank you, @Model.Name</h1>
+        <h2>Your message has been recorded</h2>
+    </div>
+    Click <a asp-action="ListMessages">here</a> to see the list of messages.
+</body>
+
+</html>
